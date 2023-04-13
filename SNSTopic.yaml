@@ -1,0 +1,8 @@
+Resources:
+  SNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: "Vishwas-SNS-CF"
+      Subscription:
+        - Endpoint: "vold.lord@yahoo.com" #provide a valid email.
+          Protocol: email

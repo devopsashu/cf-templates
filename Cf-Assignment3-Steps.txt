@@ -1,0 +1,14 @@
+Cloudformation Assignment 3 Steps
+
+1. Create SNS Topic Using Cloudformation template.
+2. Create Another Stack for any AWS S3 resource using Template
+3. Update S3 stack and change the notification settings to send messages via 
+SNS.
+
+We need to do it manually as ARN of the topic itself can't be mentioned while
+creation of stack itself.
+
+Link below for reference 
+
+https://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-rollback-email/
+

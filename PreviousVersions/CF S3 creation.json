@@ -1,0 +1,13 @@
+{
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "BucketName": "vishwas-1234567890-cfbucket",
+                "VersioningConfiguration":{
+                    "Status":"Enabled"
+                }
+            }
+        }
+    }
+}

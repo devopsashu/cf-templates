@@ -1,0 +1,21 @@
+Resources:
+  EC2SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: "Vishwas-EC2-CF-Sg"
+      VpcId: vpc-018e1dad574748a56 
+      GroupDescription: "Security Group for Instance Created Using Cloudformation."
+      SecurityGroupIngress:
+        - IpProtocol: '-1'
+          CidrIp: 0.0.0.0/0
+      SecurityGroupEgress:
+        - IpProtocol: '-1'
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: "Name"
+          Value: "Vishwas-EC2-CF-Sg"
+
+Outputs:
+  EC2SecurityGroup:
+    Description: "Security Group Created."
+    Value: !Ref EC2SecurityGroup
