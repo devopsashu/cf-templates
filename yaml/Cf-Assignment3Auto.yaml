@@ -1,0 +1,22 @@
+Parameters:   
+  SNSTopicName:
+    Type: String
+    Description: "Provide a name for your SNS Topic."
+  # SNSEndpoint:
+  #   Type: String
+  #   Description: "Provide a valid email to subscribe to your SNS topic."
+Resources:
+  SNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Ref SNSTopicName
+      # Subscription:
+      #   - Endpoint: !Ref SNSEndpoint #provide a valid email.
+      #     Protocol: email
+  MyStack:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: https://vishwas-cf-bucket-do-not-delete.s3.amazonaws.com/Cf-Assignment3Auto.template
+      NotificationARNs:
+        - !Ref SNSTopic
+

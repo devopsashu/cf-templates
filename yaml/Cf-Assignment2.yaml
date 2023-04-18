@@ -1,3 +1,11 @@
+Parameters:
+  AMI:
+    Type: String
+    Description: "Provide the AMI Id to create Instances using that particular AMI.
+    You can copy the AMI Id from EC2 Launch Instance Console for an AMI and provide it here."
+  Key:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: "Select a key pair from existing key pairs."
 Resources:
   VPC:
     Type: AWS::EC2::VPC
@@ -72,7 +80,8 @@ Resources:
   EC2Instance:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0b5eea76982371e91 #ami id of amazon linux instance in north virginia
+      ImageId: !Ref AMI
+      KeyName: !Ref Key
       InstanceType: t2.micro
       SubnetId: !Ref PublicSubnet
       SecurityGroupIds: 

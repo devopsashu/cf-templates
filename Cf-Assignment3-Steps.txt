@@ -4,6 +4,11 @@ Cloudformation Assignment 3 Steps
 2. Create Another Stack for any AWS S3 resource using Template
 3. Update S3 stack and change the notification settings to send messages via 
 SNS.
+OR
+
+1. Create a stack that creates Both SNS and S3 Bucket.
+2. After creation of the stack, Add Notifcations for the stack and provide the SNS topic there, created by the stack itself.
+
 
 We need to do it manually as ARN of the topic itself can't be mentioned while
 creation of stack itself.
